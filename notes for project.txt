@@ -1,0 +1,8 @@
+meats 
+veggies 
+crust
+specialty toppings
+sauce
+if you want size
+
+each so be called from a function
