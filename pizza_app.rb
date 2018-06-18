@@ -16,7 +16,8 @@
     def cheese()
         cheese = [ "extra cheese", "no extra cheese" ]
     end
-    toppings = 0.50
+    delivery_choice = 
+    delivery_price =
     sizeprice = 
     cheeseprice = 
     cheesecount = 
@@ -40,17 +41,21 @@ $choice_6 == ""
 $choice_7 == ""
 
 puts "Would this be pick up or delivery ?"
-puts "please press 1 for (pick up) or 2 for (Delivery)" 
+puts "please press 1 for (pick up) or 2 for (Delivery) is an extra $3.00" 
 
 
 loop do
     choice_1 = gets.chomp.to_i
     if choice_1 == 1 
        puts "Pickup"
+       delivery_choice = "Pick up"
+       delivery_price = "0.00"
        break
     elsif 
         choice_1 == 2
         puts "Delivery"
+        delivery_choice = "Delivery"
+        delivery_price = "3.00"
         break
     else
         puts "not a valid choice"
@@ -65,7 +70,7 @@ puts "Small - $6.99, Medium - $8.99, Large - $10.99  and extra large - $12.99"
     loop do
         choice_2 = gets.chomp.to_i
         if choice_2  == 1 
-            sizeprice = 6.99
+            sizeprice = "6.99"
             sizechoice = "Small"
         break
         elsif 
@@ -221,7 +226,7 @@ loop do
     puts "8 for all three"
     choice_7 = gets.chomp.to_i
     if choice_7 == 1 
-       veggiechoice = "No Veggies Toppings"
+       veggiechoice = "No Veggie Toppings"
        veggieprice = "0.00" 
        break
     elsif 
@@ -251,7 +256,7 @@ loop do
         break
     elsif 
         choice_7 == 7
-        veggiechoice = " Onions and Mushrooms"
+        veggiechoice = "Onions and Mushrooms"
         veggieprice = "1.00"
         break
     elsif 
@@ -267,7 +272,9 @@ loop do
     end    
 end
 
-puts "#{sizechoice} #{crustchoice} with #{sauce_value} #{cheesechoice} #{meatchoice} and  #{veggiechoice} "
-totalprice = sizeprice.to_f + meatprice.to_f + crustprice.to_f + cheeseprice.to_f + veggieprice.to_f
-puts "Your Total is $ #{totalprice.round(2)}"
+puts "So thats for #{delivery_choice} \nand it's one #{sizechoice} \n#{crustchoice} \nwith #{sauce_value} \n#{cheesechoice} \n#{meatchoice} \nand #{veggiechoice} "
+totalprice = sizeprice.to_f + meatprice.to_f + crustprice.to_f + cheeseprice.to_f + veggieprice.to_f + delivery_price.to_f 
+taxed = totalprice * 0.06
+finalprice = totalprice + taxed
+puts "Your Bill is \nSub Total $#{totalprice.round(2)} \nTax $#{taxed.round(2)} \nFinal Price $#{finalprice.round(2)}"
 

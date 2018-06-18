@@ -221,7 +221,7 @@ loop do
     puts "8 for all three"
     choice_7 = gets.chomp.to_i
     if choice_7 == 1 
-       veggiechoice = "No Veggies Toppings"
+       veggiechoice = "No Veggie Toppings"
        veggieprice = "0.00" 
        break
     elsif 
@@ -267,7 +267,7 @@ loop do
     end    
 end
 
-puts "#{sizechoice} #{crustchoice} with #{sauce_value} #{cheesechoice} #{meatchoice} and  #{veggiechoice} "
+puts "One #{sizechoice} #{crustchoice} with #{sauce_value} #{cheesechoice} #{meatchoice} and  #{veggiechoice} "
 totalprice = sizeprice.to_f + meatprice.to_f + crustprice.to_f + cheeseprice.to_f + veggieprice.to_f
 puts "Your Total is $ #{totalprice.round(2)}"
 
