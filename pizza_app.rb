@@ -1,4 +1,5 @@
-    def meats()
+
+def meats()
     meats = [ "pepperoni", "sasauge", "bacon"]
     end
     def veggies()
